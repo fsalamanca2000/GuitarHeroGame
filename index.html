@@ -3,49 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rockstar Game</title>
+    <link rel="icon" href="img/guitarra.png" type="png" sizes="32px">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css ">
 </head>
 <body>
-    <div class="contenedor">
-        <div class="circulo"></div>
+    <div id="menu">
+        <button type="button" class="btn btn-info" id="btnInstrucciones" data-bs-toggle="modal"
+            data-bs-target="#Instrucciones">
+            <h2>Como Jugar</h2>
+        </button>
+        <center>
+            <div id="title">
+                <img src="img/guitarra.png" alt="logotipo menu" width="100px" class="imagen-logo">
+            <h1>Rockstar Game</h1>
+            </div>
+        </center>
     </div>
-    <style>
-        .contenedor{
-            width: 1200px;
-            height: 400px;
-            border: 1px solid black;
-        }
-        .circulo{
-            width: 30px;
-            height: 30px;
-            background-color: red;
-            border-radius: 50%;
-        }
-    </style>
-
-    <script>
-        var contenedor = document.querySelector(".contenedor");
-        function crearCirculo(){
-            var nuevoCirculo = document.createElement("div")
-            nuevoCirculo.setAttribute("class", "circulo");
-            contenedor.appendChild(nuevoCirculo)
-        }
-        for(i=1; 1<=3; i++){
-            crearCirculo()
-        }
-        var contador =0;
-        var intervalo = setInterval(function(){
-            contador = contador+1
-        var elementos = document.querySelectorAll(".circulo")   
-            document.querySelector(".circulo")elementos.style.marginLeft=contador+"px";
-        },10)
-
-        document.addEventListener("keyup",function(evento) {
-        console.log(evento.key)
-        if(evento.key === "a"){
-            clearInterval(intervalo);
-        }
-        })
-    </script>
+    <div id="game">
+        <center>
+        <div id="background">
+            <img src="img/WEvmMMh.png" alt="background-game" width="2000px" height="800px"}>
+            <div id="puntuacion">
+                <h2 >Puntaje:</h2>
+            </div>
+            <div class="linea" id="ln1"></div>
+            <div id="nota-amarilla">
+                <h6 id="s">S</h6>
+            </div>
+            <!-- <div id="nota-amarilla-i"></div> -->
+            <div class="linea" id="ln2"></div>
+            <div id="nota-roja">
+                <h6 id="d">D</h6>
+            </div>
+            <!-- <div id="nota-roja-i"></div> -->
+            <div class="linea" id="ln3"></div>
+            <div id="nota-verde">
+                <h6 id="a">A</h6>
+            </div>
+            <!-- <div id="nota-verde-i"></div> -->
+            <div class="linea" id="ln4"></div>
+            <button type="button" class="btn btn-success" id="start" onclick={comenzarJuego()}>Jugar</button>
+            <button type="button" class="btn btn-warning" id="restart" onclick={reiniciar()}>Reiniciar</button>
+        </div>
+        <button type="button" class="btn btn-outline-success" id="facil" onclick={ajustarDificultadFacil()}>
+            <h4>Facil:</h2>
+            <img src="img/guitarra_facil.png" alt="img guitarra modo facil" width="100px" height="100px">
+        </button>
+        <button type="button" class="btn btn-outline-warning" id="intermedio" onclick={ajustarDificultadIntermedia()}>
+            <h4>Intermedio:</h2>
+            <img src="img/guitarra_mediana.png  " alt="img guitarra modo intermedio" width="100px" height="100px">
+        </button>
+        <button type="button" class="btn btn-outline-danger" id="dificil" onclick={ajustarDificultadDificil()}>
+            <h4>Dificil:</h2>
+            <img src="img/guitarra_dificil.png " alt="img guitarra modo dificil" width="100px" height="100px">
+        </button>
+        </center>
+    </div>
+        <footer>
+            <center>
+                <h4>Hecho por: Juan Felipe Salamanca González - 506222704</h4>
+            </center>
+        </footer>
+    </div>
+    <!-- Instucciones -->
+    <div class="modal fade" id="Instrucciones" tabindex="-1" aria-labelledby="InstruccionesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="InstruccionesLabel"><strong>Instrucciones Rockstar Game:</strong></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item"><strong>¿De qué trata?:</strong> Es un juego inspirado en Guitar Hero donde de forma horizontal vas a oprimir las notas en el momento exacto.</li>
+                        <li class="list-group-item"><strong>¿Cómo iniciar a jugar?:</strong> Selecciona una dificultad y esta te abrirá una ventana donde debes oprimir el botón jugar.</li>
+                        <li class="list-group-item"><strong>Dificultad:</strong> El juego cuenta con tres dificultades donde cada una aumentará la velocidad de las notas, pero no aumentará la cantidad de notas a tocar.</li>
+                        <li class="list-group-item"><strong>Comandos:</strong> Las notas se podrán tocar con A (Nota Verde), S (Nota Roja), D (Nota Amarilla).</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger cancelar" data-bs-dismiss="modal">CERRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,147 @@
+button{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#puntuacion{
+    position: relative;
+    top: -750px;
+    right: 800px;
+    color: aliceblue;
+}
+#nota-verde{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 5px #017414 solid;
+    border-radius: 50%;
+    top: 645px;
+    left: 1940px;
+}
+#nota-roja{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 5px #8d0404 solid;
+    border-radius: 50%;
+    top: 425px;
+    left: 1940px;
+}
+#nota-amarilla{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 5px #aeb105 solid;
+    border-radius: 50%;
+    top: 535px;
+    left: 1940px;
+}
+#nota-amarilla h6{
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: #aeb105;
+}
+#nota-roja h6{
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: #8d0404;
+}
+#nota-verde h6{
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: #017414;
+}
+#nota-verde-i{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 4px #017414 solid;
+    border-radius: 50%;
+    top: 645px;
+    left: 250px;
+}
+#nota-roja-i{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 4px #8d0404 solid;
+    border-radius: 50%;
+    top: 425px;
+    left: 250px;
+}
+#nota-amarilla-i{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 4px #aeb105 solid;
+    border-radius: 50%;
+    top: 535px;
+    left: 250px;
+}
+.nota-fuera-de-limite {
+    animation: none !important; /* Detiene la animación */
+}
+.linea{
+    width: 2000px;
+    height: 10px;
+    border: 1px grey  solid;
+    position: absolute;
+    background-color: black ;
+}
+#ln1{
+top: 415px;
+}
+#ln2{
+top: 525px;
+}
+#ln3{
+    top: 635px;  
+}
+#ln4{
+    top: 745px;   
+    }
+#background{
+    width: 2000px;
+    height: 800px;
+    margin-top: -60px;
+}
+#title{
+    position: relative   ;
+    top: -50px;
+    
+}
+#start{
+    position: absolute ;
+    top: 800px;
+    right: 1200px;
+    width: 300px;
+    border: 4px black solid;
+    font-size: 32px;
+    border-radius: 20px;
+}
+#restart{
+    position: absolute ;
+    top: 800px;
+    
+    width: 300px;
+    border: 4px black solid;
+    font-size: 32px;
+    border-radius: 20px;
+}
+#btnInstrucciones{
+    margin-top: 0px;
+}
